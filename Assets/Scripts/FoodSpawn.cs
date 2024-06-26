@@ -5,9 +5,11 @@ using UnityEngine;
 public class FoodSpawn : MonoBehaviour
 {
     public GameObject[] objectPrefabs;
+
     // Start is called before the first frame update
     void Start()
     {
+         
         
         InvokeRepeating("RespawnFood",1.0f,1.0f);
 
@@ -25,6 +27,8 @@ public class FoodSpawn : MonoBehaviour
         int RandomFood= Random.Range(0,objectPrefabs.Length);
         Instantiate(objectPrefabs[RandomFood], spawnLocation, objectPrefabs[RandomFood].transform.rotation);
     }
+
+   
 
     
 
